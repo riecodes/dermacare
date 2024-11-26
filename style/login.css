@@ -1,0 +1,90 @@
+
+body {
+    position: relative;
+    margin: 7%;
+    background-image: url(../img/hommebg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: rgba(0, 0, 0, 0.168); 
+    z-index: -1; 
+}
+
+.container {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.905);
+    border-radius: 8px;
+    padding: 20px; /* Add padding inside the container */
+    box-shadow: 0 3px 5px 0 rgba(240, 240, 240, 0.3);
+    animation: transitionIn-Y-over 0.5s;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+
+td{
+    text-align: center;
+
+}
+.header-text{
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+
+}
+
+.header-image {
+    width: 35vh; /* Adjust as needed */
+    height: 10vh;
+}
+
+
+.sub-text {
+    font-size: 15px;
+    color: rgb(138, 138, 138);
+
+}
+
+
+.form-label{
+    color: rgb(44, 44, 44);
+    text-align: left;
+    font-size: 16px;
+}
+
+.label-td{
+    text-align: left;
+    padding-top: 10px;
+}
+
+.input-text {
+    width: 60vh; /* Adjust the width to fit the container */
+    padding: 10px;
+    font-size: 12px; /* Adjust the font size */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+
+.hover-link1{
+    font-weight: bold;
+}
+
+.hover-link1:hover{
+    opacity: 0.8;
+    transition: 0.5s;
+
+
+}.login-btn{
+    margin-bottom: 15px;
+    width: 30%;
+}
+

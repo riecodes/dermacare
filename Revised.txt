@@ -1,0 +1,44 @@
+Revised FILES:
+
+http://localhost/dermacare/admin/request-i.php
+http://localhost/dermacare/admin/skincare.php
+http://localhost/dermacare/admin/appointment.php
+
+
+
+
+
+Note: Try mo sir tignan yung sa RESERVED PRODUCTS, pag mag aAdd meron nakalagay na RESEARVED FOR ( BRANCH NAME ). 
+Napansin ko dahil don nagana na sa specific Branch lang narRead yung RESERVED PRODUCT.
+
+Need To Do:
+
+APPOINTMENT 
+- Add Appointment
+
+
+
+
+
+
+
+
+
+
+
+
+DONE DONEDONEDONEDONEDONEDONEDONEDONEDONEDONE
+
+NOTE: Aalisin na ang PATIENTS TAB, bale sir yung Information ng Patients ay ilalagay nalang sa VIEW BUTTON sa Appointment Tab ( Add VIEW BUTTON )
+      Tapos yung Search Bar sa Appointment Tab pailtan ng search bar na ang isSearch ay Patient name
+
+MAIN ADMIN
+- Remove Yes (Request). Parehas hindi functional
+
+BRANCH ADMIN
+- Appointment Number (Done Button). Kunwari Kapag pinindot ang Done button, 
+lahat ng may number 1 na Appointment number nag dDone din.
+
+Additional
+- Number of request Skincare (Branch Admin). Natotal kasama yung request para sa Treatments
+- Available Skincare. EDIT (Instead ID use Product Name). Gamitin nalang ay Product Name para maedit yung Quantity
