@@ -67,7 +67,7 @@
                             $today = date('Y-m-d');
                             echo $today;
 
-                            $list110 = $database->query("SELECT  * FROM  request WHERE aid = $userid");
+                            $list110 = $database->query("SELECT  * FROM  request WHERE aid = $userid AND productid IS NOT NULL");
                             
                             ?>
                         </p>

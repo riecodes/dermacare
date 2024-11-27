@@ -55,13 +55,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </td>
             </tr>
             <tr class="menu-row">
-                <td class="menu-btn menu-icon-patient <?php echo $current_page == 'patient.php' ? 'menu-active menu-icon-patient-active' : ''; ?>">
-                    <a href="patient.php" class="non-style-link-menu <?php echo $current_page == 'patient.php' ? 'non-style-link-menu-active' : ''; ?>">
-                        <div><p class="menu-text">Patients</p></div>
-                    </a>
-                </td>
-            </tr>
-            <tr class="menu-row">
                 <td class="menu-btn menu-icon-reserve <?php echo $current_page == 'reserve.php' ? 'menu-active menu-icon-reserve-active' : ''; ?>">
                     <a href="reserve.php" class="non-style-link-menu <?php echo $current_page == 'reserve.php' ? 'non-style-link-menu-active' : ''; ?>">
                         <div><p class="menu-text">Reserved Products</p></div>
