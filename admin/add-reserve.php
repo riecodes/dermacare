@@ -18,6 +18,8 @@ if ($_POST) {
     $reserveid = $_POST["reserveid"];    
     $productid = $_POST["productid"];
     $reservequantity = $_POST["reservequantity"];
+    $pid = $_POST["pid"];  // Patient ID
+    $pickupdate = $_POST["pickupdate"];
     $aid = $_POST["aid"];  // Admin ID
 
     // Set the default reserve status and reserve date
@@ -33,8 +35,8 @@ if ($_POST) {
         $productname = $row["productname"];  // Get the product name for reference
 
         // Insert the new reserve into the `reserve` table
-        $sql = "INSERT INTO reserve (reserveid, productid, reservequantity, aid) 
-                VALUES ('$reserveid', '$productid', '$reservequantity', '$aid')";
+        $sql = "INSERT INTO reserve (reserveid, productid, pid, pickupdate , reservequantity, aid) 
+                VALUES ('$reserveid', '$productid', '$pid', '$pickupdate', '$reservequantity', '$aid')";
 
         // Execute the insert query and redirect
         if ($database->query($sql) === TRUE) {

@@ -96,11 +96,6 @@
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-patient">
-                        <a href="patient.php" class="non-style-link-menu"><div><p class="menu-text">My Patients</p></a></div>
-                    </td>
-                </tr>
-                <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings  menu-active menu-icon-settings-active">
                         <a href="settings.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Settings</p></a></div>
                     </td>

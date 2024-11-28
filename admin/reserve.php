@@ -128,14 +128,15 @@
                             product.productname = '$keyword' OR
                             product.productname LIKE '$keyword%' OR
                             product.productname LIKE '%$keyword' OR
-                            product.productname LIKE '%$keyword%'
+                            product.productname LIKE '%$keyword%' 
                         )";
                 } else {
                     // Default query to fetch reserves for the user
                     $sqlmain = "
-                        SELECT reserve.*, product.productname
+                        SELECT reserve.*, product.productname, patient.pname
                         FROM reserve
                         INNER JOIN product ON reserve.productid = product.productid
+                        LEFT JOIN patient ON reserve.pid = patient.pid
                         WHERE reserve.aid = $userid
                         ORDER BY reserve.pickupdate DESC";
                 }
@@ -153,6 +154,7 @@
                                         <tr>
                                             <th class="table-heading">Product Name</th>
                                             <th class="table-heading">Reserve Quantity</th>
+                                            <th class="table-heading">Patient Name</th>
                                             <th class="table-heading">Pickup Date</th>
                                             <th class="table-heading">Status</th>
                                             <th class="table-heading">Actions</th>
@@ -192,6 +194,7 @@
                                         $row = $result->fetch_assoc();
                                         $reserveid = $row["reserveid"];
                                         $productid = $row["productid"];
+                                        $pname = $row["pname"];
                                         $productname = $row["productname"];
                                         $pickupdate = $row["pickupdate"]; 
                                         $status = $row["status"];
@@ -201,6 +204,7 @@
                                         <tr>
                                             <td>' . $productname . '</td>
                                             <td>' . $reservequantity . '</td>
+                                            <td>' . $pname . '</td>
                                             <td>' . $pickupdate . '</td>
                                             <td>' . $status . '</td>
                                             <td style="padding: 10px;">

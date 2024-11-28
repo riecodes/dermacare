@@ -21,7 +21,7 @@ if ($_GET) {
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">                                                    
-                                            <label for="reserveid" class="form-label"> Reserve For:  </label>
+                                            <label for="reserveid" class="form-label"> Reserve For Branch:  </label>
                                             <input type="hidden" name="aid" value="' . $userid . '">
                                         </td>
                                     </tr>
@@ -30,6 +30,25 @@ if ($_GET) {
                                             <input type="text" name="reserveadmin" class="input-text" value="' . $username . '" readonly><br>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td class="label-td" colspan="2">
+                                            <label for="pid" class="form-label">Select Patient: </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-td" colspan="2">
+                                            <select name="pid" class="box" required>';
+                                                
+                                                // Fetch patients from the database
+                                                $patients = $database->query("SELECT pid, pname FROM patient ORDER BY pname ASC");
+                                                while ($patient = $patients->fetch_assoc()) {
+                                                    $pname = $patient["pname"];
+                                                    $pid = $patient["pid"];
+                                                    echo "<option value=\"$pid\">$pname</option>";
+                                                }
+    
+                                            echo '
+                                            </select><br><br>
                                         </td>
                                     </tr>
                                     <tr>
@@ -59,6 +78,16 @@ if ($_GET) {
 
                                                 echo'
                                             </select><br><br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-td" colspan="2">
+                                            <label for="pickupdate" class="form-label">Pickup Date: </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-td" colspan="2">
+                                            <input type="date" name="pickupdate" class="input-text" min="' . date('Y-m-d') . '" required><br>
                                         </td>
                                     </tr>
                                     <tr>

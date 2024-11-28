@@ -112,13 +112,17 @@ if ($_GET) {
     } elseif ($action == 'edit') {
         $sqlmain = "SELECT * FROM skincare INNER JOIN admin ON skincare.aid = admin.aid WHERE skincareid = '$id'";
         $result = $database->query($sqlmain);
-        $row = $result->fetch_assoc();
-
-        $productname = $row["productname"];
+        $row = $result->fetch_assoc();        
         $skincareid = $row["skincareid"];
         $productid = $row["productid"];
         $skincarequantity = $row["skincarequantity"];
         $aname = $row["aname"];
+
+        // get productname using productid
+        $sql = "SELECT * FROM product WHERE productid = '$productid'";
+        $result = $database->query($sql);
+        $row2 = $result->fetch_assoc();
+        $productname = $row2["productname"];
 
         echo '
 

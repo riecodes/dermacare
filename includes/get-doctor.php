@@ -289,7 +289,6 @@ if ($_GET) {
         $spcil_res = $database->query("select sname from specialties where id='$spe'");
         $spcil_array = $spcil_res->fetch_assoc();
         $spcil_name = $spcil_array["sname"];
-        $nic = $row['docnic'];
         $tele = $row['doctel'];
 
         $error_1 = $_GET["error"];
