@@ -157,9 +157,6 @@
                                                 Email
                                             </th>
                                             <th class="table-heading">
-                                                Specialties
-                                            </th>
-                                            <th class="table-heading">
                                                 Actions
                                             </th>
                                         </tr>
@@ -204,11 +201,7 @@
                                             $row = $result->fetch_assoc();
                                             $docid = $row["docid"];
                                             $name = $row["docname"];
-                                            $email = $row["docemail"];
-                                            $spe = $row["specialties"];
-                                            $spcil_res = $database->query("select sname from specialties where id='$spe'");
-                                            $spcil_array = $spcil_res->fetch_assoc();
-                                            $spcil_name = $spcil_array["sname"];
+                                            $email = $row["docemail"];                                                                                        
                                         echo 
                                         '<tr>
                                             <td style="padding: 10px;"> 
@@ -216,9 +209,6 @@
                                             </td>
                                             <td>
                                                 ' . substr($email, 0, 20) . '
-                                            </td>
-                                            <td>
-                                                ' . substr($spcil_name, 0, 20) . '
                                             </td>
                                             <td style="padding: 10px;">
                                                 <div style="display:flex; justify-content: center; gap: 10px; align-items: center;">                                                

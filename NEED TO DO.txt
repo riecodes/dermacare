@@ -1,16 +1,16 @@
 NEED TO DO
 
 BRANCH ADMIN
-- Alisin na yung STATUS (DASHBOARD), papalitan ng katulad sa THERAPIST sa WELCOME message
+!- Alisin na yung STATUS (DASHBOARD), papalitan ng katulad sa THERAPIST sa WELCOME message
 !- Lagyan ng PATIENT NAME ang RESERVED PRODUCT
 !- Lagyan ng PICK UP DATE kapag nag aADD ng Reserved Product
 
 THERAPIST
-- Hindi nashow yung Patient na nag Appointmen sa Therapist. ( Kunwari pinili ni patient si Therapist 1, hindi nalabas sa account ni Therapist 1 yung patient appointment )
-- Alisin na ang MY PATIENTS tab
+!- Hindi nashow yung Patient na nag Appointmen sa Therapist. ( Kunwari pinili ni patient si Therapist 1, hindi nalabas sa account ni Therapist 1 yung patient appointment )
+!- Alisin na ang MY PATIENTS tab
 
 
-- Paalis din sir nung SPECIALTIES ni Therapist ( Face & Body ). Ito ay nasa ADD THERAPIST sa BRANCH ADMIN
+!- Paalis din sir nung SPECIALTIES ni Therapist ( Face & Body ). Ito ay nasa ADD THERAPIST sa BRANCH ADMIN
 
 
 

@@ -43,13 +43,8 @@ if ($_GET) {
         $row = $result->fetch_assoc();
         $name = $row["docname"];
         $email = $row["docemail"];
-        $spe = $row["specialties"];
-
-        $spcil_res = $database->query("select sname from specialties where id='$spe'");
-        $spcil_array = $spcil_res->fetch_assoc();
-        $spcil_name = $spcil_array["sname"];
-        $nic = $row['docnic'];
         $tele = $row['doctel'];
+
         echo '
             <div id="popup1" class="overlay">
                 <div class="popup">
@@ -99,17 +94,6 @@ if ($_GET) {
                             <tr>
                                 <td class="label-td" colspan="2">
                                 ' . $tele . '<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label">Specialties: </label>
-                                    
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                ' . $spcil_name . '<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -199,26 +183,7 @@ if ($_GET) {
                                         </tr>
                                         <tr>
                                             <td class="label-td" colspan="2">
-                                                <label for="spec" class="form-label">Choose specialties: </label>
-                                                
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="label-td" colspan="2">
-
-                                                <select name="spec" id="" class="box" >';
-
-                $list11 = $database->query("select * from  specialties order by sname asc;");
-
-                for ($y = 0; $y < $list11->num_rows; $y++) {
-                    $row00 = $list11->fetch_assoc();
-                    $sn = $row00["sname"];
-                    $id00 = $row00["id"];
-                                                    echo "<option value=" . $id00 . ">$sn</option><br/>";
-                };
-                                            echo '   
-                                                </select><br><br>
-                                                
+                                                <input type="hidden" name="spec" value="1">                                            
                                             </td>
                                         </tr>
                                         <tr>
@@ -285,10 +250,6 @@ if ($_GET) {
         $row = $result->fetch_assoc();
         $name = $row["docname"];
         $email = $row["docemail"];
-        $spe = $row["specialties"];
-        $spcil_res = $database->query("select sname from specialties where id='$spe'");
-        $spcil_array = $spcil_res->fetch_assoc();
-        $spcil_name = $spcil_array["sname"];
         $tele = $row['doctel'];
 
         $error_1 = $_GET["error"];
@@ -358,31 +319,7 @@ if ($_GET) {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="label-td" colspan="2">
-                                            <label for="spec" class="form-label">Choose specialties: (Current: ' . $spcil_name . ')</label>
-                                            
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="label-td" colspan="2">
-                                            <select name="spec" id="" class="box">
-                                            
-                                            ';
-
-
-            $list11 = $database->query("select  * from  specialties;");
-
-            for ($y = 0; $y < $list11->num_rows; $y++) {
-                $row00 = $list11->fetch_assoc();
-                $sn = $row00["sname"];
-                $id00 = $row00["id"];
-                echo "<option value=" . $id00 . ">$sn</option><br/>";
-            };
-
-            echo '
-
-                                            </select><br><br>
-                                        </td>
+                                        <input type="hidden" name="spec" value="1">
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
